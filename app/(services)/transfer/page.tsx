@@ -1,8 +1,10 @@
+import TransferForm from "./_components/transfer-form";
+
 const TransferPage = () => {
     
     return ( 
-        <div>
-            Transfer Page
+        <div className="h-full w-full flex items-center justify-center">
+            <TransferForm />
         </div>
      );
 }
