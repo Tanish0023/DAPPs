@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { ToastContainer } from 'react-toastify';
+import Footer from "./_components/footer";
 
 
 const geistSans = Geist({
@@ -28,6 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script src="https://kit.fontawesome.com/72baf1e4bf.js" crossOrigin="anonymous"></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -38,6 +42,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <div className="bottom-0 fixed flex items-center justify-center w-full h-16 bg-slate-800 overflow-hidden">
+            <Footer />
+          </div>
         </ThemeProvider>
         <ToastContainer />
       </body>

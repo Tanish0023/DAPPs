@@ -14,8 +14,12 @@ export default function Home() {
     <ConnectionProvider endpoint="https://api.devnet.solana.com">
       <WalletProvider wallets={[]} autoConnect>
         <WalletModalProvider>
-          <Navbar />
-          <WelcomePage />
+        <div className="flex flex-col h-screen">
+            <Navbar />
+            <div className="flex flex-1 items-center justify-center p-3 lg:p-7">
+                <WelcomePage />
+            </div>
+        </div>
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>
