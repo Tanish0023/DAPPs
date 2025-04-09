@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ToastContainer } from 'react-toastify';
 import Footer from "./_components/footer";
 
+import { Analytics } from "@vercel/analytics/react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({
           <div className="bottom-0 fixed flex items-center justify-center w-full h-16 bg-slate-800 overflow-hidden">
             <Footer />
           </div>
+          <Analytics />
         </ThemeProvider>
         <ToastContainer />
       </body>
